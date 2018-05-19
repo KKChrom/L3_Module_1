@@ -72,8 +72,7 @@ public class Algorithms {
 	}
 	public static List<String> sortDNA(List<String> unsortedSequences)
 	{
-		Collections.sort(unsortedSequences);
-		return unsortedSequences;
+		
 	}
 	public static List <String>sortWords (List<String> words)
 	{

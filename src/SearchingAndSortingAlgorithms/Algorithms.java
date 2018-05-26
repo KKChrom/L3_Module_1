@@ -1,6 +1,7 @@
 package SearchingAndSortingAlgorithms;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Algorithms {
@@ -72,11 +73,14 @@ public class Algorithms {
 	}
 	public static List<String> sortDNA(List<String> unsortedSequences)
 	{
-		
+		 Comparator<String> cmp = Comparator.comparingInt(String::length)
+	             .thenComparing(String.CASE_INSENSITIVE_ORDER);
+		 Collections.sort(unsortedSequences,cmp);
+		 return unsortedSequences;
 	}
 	public static List <String>sortWords (List<String> words)
 	{
-		java.util.Collections.sort(words);
+		Collections.sort(words);
 		return words;
 	}
 }
